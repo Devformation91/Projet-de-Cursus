@@ -13,7 +13,9 @@
         <a class="btn btn primary" href ="">Bouton</a>
         <p class="h2">les exercices en php</p>
         <li>le première exo</li>
+        <p>voici <span><a href="exo2.php">l'exercice 2</a></span></p>
     </div>
+
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
