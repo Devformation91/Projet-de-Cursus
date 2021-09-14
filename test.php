@@ -79,32 +79,58 @@
 
     //   var_dump($associatArray["first Name"]);
 
-    $tab = ["coucou"];
+    // $tab = ["coucou"];
 
-    $tab1 = [
-      'tab1Key1' => " tableau 1 valeur 1",
-      'tab1Key2' => " tableau 1 valeur 2",
-      'tab1Key3' => " tableau 1 valeur 3",
-    ];
-    $tab2 = [
-      'tab2Key1' => " tableau 2 valeur 1",
-      'tab2Key2' => " tableau 2 valeur 2",
-      'tab2Key3' => [
-        'keyTruc' =>" tableau 2 valeur 3",
-        'keyMachin' => "autre chose",
-      ],
-    ];
-    $tab3 = [
-      'tab3Key1' => " tableau 3 valeur 1",
-      'tab3Key2' => " tableau 3 valeur 2",
-      'tab3Key3' => " tableau 3 valeur 3",
-    ];
-    $tab = [
-      'tab1' => " tab1",
-      'tab2' => " tab2",
-      'tab3' => " tab3",
-    ];
+    // $tab1 = [
+    //   'tab1Key1' => " tableau 1 valeur 1",
+    //   'tab1Key2' => " tableau 1 valeur 2",
+    //   'tab1Key3' => " tableau 1 valeur 3",
+    // ];
+    // $tab2 = [
+    //   'tab2Key1' => " tableau 2 valeur 1",
+    //   'tab2Key2' => " tableau 2 valeur 2",
+    //   'tab2Key3' => [
+    //     'keyTruc' =>" tableau 2 valeur 3",
+    //     'keyMachin' => "autre chose",
+    //   ],
+    // ];
+    // $tab3 = [
+    //   'tab3Key1' => " tableau 3 valeur 1",
+    //   'tab3Key2' => " tableau 3 valeur 2",
+    //   'tab3Key3' => " tableau 3 valeur 3",
+    // ];
+    // $tab = [
+    //   'tab1' => " tab1",
+    //   'tab2' => " tab2",
+    //   'tab3' => " tab3",
+    // ];
+    // 
+    
+    //encode message 
+    $message = "APPRENDRE PHP EST UNE CHOSES FORMIDABLE";
+    $key = "BACKEND";
+    $messageTab = str_split($key);
+    $keyTab = str_split($key);
+    $keySize = count($keyTab);
+    
+    $encodedMessage = [];
+    $keyCounter = 0;
+    foreach ($messageTab as $pointer => $letterToEncode) {
+      $positionKeyLetter = $keyCounter % $keySize;
+      $keyLetter = $keyTab[$positionKeyLetter]
+      if ($letterToEncode != " "){
+          $encodedMessage[] = $vigenere[$letterToEncode][$keyLetter];
+      } else{
+          $encodedMessage[] = " ";
+      }
+      $keyCounter++;
+    }
+
+    $cryptedMessage = implode($encodedMessage)
+    var_dump()
     ?>
+
+    
 
 
 

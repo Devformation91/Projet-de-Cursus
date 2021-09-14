@@ -12,7 +12,7 @@
         <h1>Exercice 4</h1>
         <h5>1- créer une <a href="https://www.latoilescoute.net/table-de-vigenere" target="_blank">table de vigenère</a></h5>
     <?php
-    // TO DO
+    // create vigenère tab
     $alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     $alphabetTab = str_split($alphabet);
     $doubleAlphaTab = array_merge($alphabetTab, $alphabetTab);
@@ -33,16 +33,26 @@
     <?php
     $message = "APPRENDRE PHP EST UNE CHOSE FORMIDABLE";
     $key = "BACKEND";
-    // TO DO
-    $cryptedMessage = $message;
-    /**
-    * astuce pour la rotation de la clé BACKEND
-    * 14 / 7 -> 2
-    * 15 / 7 -> 2 reste 1
-    * pour récuperer le "reste 1" il faut faire un modulo
-    * 15 % 7 -> 1
-    * 176 % 7 -> 1 (25 x 7 et reste 1)
-    */
+    $message = "APPRENDRE PHP EST UNE CHOSES FORMIDABLE";
+    $key = "BACKEND";
+    $messageTab = str_split($key);
+    $keyTab = str_split($key);
+    $keySize = count($keyTab);
+    
+    $encodedMessage = [];
+    $keyCounter = 0;
+    foreach ($messageTab as $pointer => $letterToEncode) {
+      $positionKeyLetter = $keyCounter % $keySize;
+      $keyLetter = $keyTab[$positionKeyLetter]
+      if ($letterToEncode != " "){
+          $encodedMessage[] = $vigenere[$letterToEncode][$keyLetter];
+      } else{
+          $encodedMessage[] = " ";
+      }
+      $keyCounter++;
+    }
+
+    $cryptedMessage = implode($encodedMessage)
     ?>
     <p>le message est: <?php echo $message; ?></p>
     <p>la clé est: <?php echo $key ?></p>
