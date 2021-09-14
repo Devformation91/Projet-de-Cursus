@@ -14,6 +14,8 @@
         <p class="h2">les exercices en php</p>
         <li>le première exo</li>
         <p>voici <span><a href="exo2.php">l'exercice 2</a></span></p>
+        <p>voici <span><a href="exo3.php">l'exercice 3</a></span></p>
+        <p>voici <span><a href="exo4.php">l'exercice 4</a></span></p>
     </div>
 
     <script src="/js/bootstrap.bundle.min.js"></script>
