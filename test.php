@@ -107,33 +107,59 @@
     // 
     
     //encode message 
-    $message = "APPRENDRE PHP EST UNE CHOSES FORMIDABLE";
-    $key = "BACKEND";
-    $messageTab = str_split($key);
-    $keyTab = str_split($key);
-    $keySize = count($keyTab);
+    // $message = "APPRENDRE PHP EST UNE CHOSES FORMIDABLE";
+    // $key = "BACKEND";
+    // $messageTab = str_split($key);
+    // $keyTab = str_split($key);
+    // $keySize = count($keyTab);
     
-    $encodedMessage = [];
-    $keyCounter = 0;
-    foreach ($messageTab as $pointer => $letterToEncode) {
-      $positionKeyLetter = $keyCounter % $keySize;
-      $keyLetter = $keyTab[$positionKeyLetter]
-      if ($letterToEncode != " "){
-          $encodedMessage[] = $vigenere[$letterToEncode][$keyLetter];
-      } else{
-          $encodedMessage[] = " ";
-      }
-      $keyCounter++;
+    // $encodedMessage = [];
+    // $keyCounter = 0;
+    // foreach ($messageTab as $pointer => $letterToEncode) {
+    //   $positionKeyLetter = $keyCounter % $keySize;
+    //   $keyLetter = $keyTab[$positionKeyLetter]
+    //   if ($letterToEncode != " "){
+    //       $encodedMessage[] = $vigenere[$letterToEncode][$keyLetter];
+    //   } else{
+    //       $encodedMessage[] = " ";
+    //   }
+    //   $keyCounter++;
+    // }
+
+    // $cryptedMessage = implode($encodedMessage)
+    // var_dump()
+    // 
+
+<!-- decode message -->
+    
+    $encodeMessage = "TWA PEE WM TESLH WL LSLVNMRJ";
+    $key4decode = "VIGENERE";
+    $encodeMessageTab2 = str_split($encodeMessage);
+    $key4decodeTab2 = str_split($key4decode);
+    $key4decodeSize = count($keyTab);
+    
+    
+    $keyCounter2 = 0;
+    foreach ($messageTab as $pointer => $letterToDecode) {
+    $positionKeyLetter2 = $keyCounter % $key4decodeSize;
+    $keyLetter2 = $key4decodeTab2[$positionKeyLetter2]
+    if ($letterToDecode != " "){
+        for ($i = 0; $i < $sizeAlphabet; $i++) {
+          $lineToDecode = $alphabetTab[$i]
+          if ($vigenere[$i][$keyLetter2] == $letterToDecode {
+
+          }
+        }
+    } else{
+        $encodedMessage[] = " ";
     }
+    $keyCounter2++;
+   }
 
     $cryptedMessage = implode($encodedMessage)
     var_dump()
     ?>
-
     
-
-
-
      affichage d'une donné précise: <?php echo $tab['tab2']['tab2Key3']['keyMachin']; ?>
       
       =====================================
